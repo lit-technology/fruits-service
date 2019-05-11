@@ -1,0 +1,71 @@
+syntax = "proto3";
+
+package fruits;
+
+message Survey {
+    int64 ID = 1;
+    string name = 2;
+    repeated Question questions = 3;
+}
+
+message Question {
+    string name = 1;
+    enum Type {
+        SINGLE = 0;
+        MULTI = 1;
+        TEXT = 2;
+        PARAGRAPH = 3;
+        SLIDER = 4;
+        CHECKBOX = 5;
+        CROSSBOX = 6;
+        DROPDOWN = 7;
+        TABLE = 8;
+		TABLE_MULTI = 9;
+    }
+    Type type = 2;
+    repeated QuestionChoice choices = 3;
+    Table table = 4;
+	int32 minLength = 5;
+	int32 maxLength = 6;
+}
+
+message QuestionChoice {
+	string name = 1;
+    	bool defaultSelected = 2;
+    	string hint = 3;
+}
+
+message Table {
+	repeated Row rows = 1;
+	repeated Column columns = 2;
+}
+
+message Row {
+	string name = 1;
+}
+
+message Column {
+	string name = 1;
+}
+
+message SurveyAnswer {
+    int64 surveyID = 1;
+	int64 surveyUserID = 2;
+    repeated Answer answers = 3;
+	string referrer = 4;
+}
+
+message Answer {
+    string S = 1;
+	repeated string SS = 2;
+    int32 N = 3;
+	repeated int32 NS = 4;
+	repeated List L = 5;
+	bool B = 6;
+	bytes BYTE = 7;
+	bool NULL = 8;
+}
+
+message List {
+	repeated int32 NS = 4;
+}
