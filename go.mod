@@ -12,10 +12,9 @@ require (
 	github.com/lib/pq v1.1.0
 	github.com/pkg/errors v0.8.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/rs/zerolog v1.14.0
+	github.com/rs/zerolog v1.20.0
 	github.com/stretchr/testify v1.2.2
 	github.com/viant/toolbox v0.20.2 // indirect
-	golang.org/x/net v0.0.0-20190311183353-d8887717615a // indirect
 	golang.org/x/oauth2 v0.0.0-20190402181905-9f3314589c9a // indirect
 	golang.org/x/text v0.3.1-0.20180807135948-17ff2d5776d2 // indirect
 	gopkg.in/yaml.v2 v2.2.2 // indirect
